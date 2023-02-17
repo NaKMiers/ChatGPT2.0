@@ -1,6 +1,8 @@
+const path = require('path')
+
 function routes(app, openai) {
    app.get('/', (req, res) => {
-      res.send('<h1>This is server of ChatGPT2.0</h1>')
+      res.sendFile(path.resolve(__dirname, '../', 'view/HomePage.html'))
    })
 
    app.post('/', async (req, res) => {
